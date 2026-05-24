@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevConnect - Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">DevConnect</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="feed.html">Feed</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+        <h1>My <span class="hero-accent">Dev Profile</span></h1>
+        <p>Your developer identity on DevConnect.</p>
+    </section>
+
+    <div class="profile-layout">
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <div class="profile-avatar" id="profileAvatar">?</div>
+            <h2 id="profileName">Loading...</h2>
+            <p id="profileLevel" class="profile-campus"></p>
+            <p id="profileEmail" class="profile-email"></p>
+            <a id="profileGithub" href="#" target="_blank" class="github-link">GitHub Profile</a>
+            <div class="profile-interests" id="profileInterests"></div>
+        </div>
+
+        <!-- Profile Details -->
+        <div class="profile-details">
+
+            <div class="detail-section">
+                <h3 class="section-toggle">About Me <span>▼</span></h3>
+                <div class="section-content">
+                    <p id="profileBio"></p>
+                </div>
+            </div>
+
+            <div class="detail-section">
+                <h3 class="section-toggle">Developer Information <span>▼</span></h3>
+                <div class="section-content">
+                    <table class="info-table">
+                        <tr>
+                            <td><strong>Full Name</strong></td>
+                            <td id="infoName"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ID Number</strong></td>
+                            <td id="infoStudentNumber"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Experience Level</strong></td>
+                            <td id="infoCampus"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email</strong></td>
+                            <td id="infoEmail"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>GitHub</strong></td>
+                            <td id="infoGithub"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="detail-section">
+                <h3 class="section-toggle">Tech Stack <span>▼</span></h3>
+                <div class="section-content">
+                    <div class="profile-interests-large" id="profileInterestsLarge"></div>
+                </div>
+            </div>
+
+            <a href="feed.html" class="btn-primary">Go to Community Board</a>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Profile JS -->
+    <script src="js/profile.js"></script>
+    </main>
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+    <footer class="footer">
+        <p>&copy; 2026 DevConnect. Built by Samuel C. William.</p>
+    </footer>
+
+</body>
+</html>
