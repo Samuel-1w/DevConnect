@@ -621,3 +621,50 @@ char-counter {
     color: var(--text-light);
     font-size: 0.85rem;
 }
+
+/* ── Scroll Reveal Animation ────────────────────── */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Hamburger Menu ─────────────────────────────── */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 0;
+        margin-top: 10px;
+    }
+
+    .nav-links.nav-open {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+}

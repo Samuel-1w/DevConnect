@@ -28,7 +28,7 @@ $(document).ready(function () {
         }
     });
 
-     renderAllPosts();
+    renderAllPosts();
 
     // ── Submit New Post ──────────────────────────────
 
@@ -67,6 +67,16 @@ $(document).ready(function () {
         // Clear the textarea
         $('#postContent').val('');
 
+        // Celebrate button animation
+        const postBtn = $('#submitPost');
+        postBtn.text('Posted! ✓').css('background-color', 'var(--accent)');
+        setTimeout(function () {
+            postBtn.text('Post').css('background-color', 'var(--primary)');
+        }, 1500);
+
+        // Reset character counter
+        $('#charCounter').text('0 / 280');
+
         // Render the new post at the top with fade-in
         renderSinglePost(newPost, true);
 
@@ -92,7 +102,7 @@ $(document).ready(function () {
             renderSinglePost(post, false);
         });
     }
-    
+
     // ── Render a Single Post Card ────────────────────
 
     function renderSinglePost(post, isNew) {

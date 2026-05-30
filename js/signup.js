@@ -203,7 +203,7 @@ $(document).ready(function () {
             clearError('github');
         }
 
-        // If all fields are valid, save to localStorage and redirect
+        // If all fields are valid save to localStorage and redirect
         if (valid) {
             const userData = {
                 fullName: fullName,
@@ -215,11 +215,17 @@ $(document).ready(function () {
                 bio: bio
             };
 
+            // Show loading state on button
+            const btn = $('button[type="submit"]');
+            btn.text('Creating Account...').prop('disabled', true);
+
             // Save user data to localStorage
             localStorage.setItem('richfieldUser', JSON.stringify(userData));
 
-            // Redirect to profile page
-            window.location.href = 'profile.html';
+            // Short delay so user sees the loading state
+            setTimeout(function () {
+                window.location.href = 'profile.html';
+            }, 1500);
         }
     });
 
